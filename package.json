@@ -1,0 +1,38 @@
+{
+  "name": "djs-tagbag",
+  "description": "tag-value storage system for your Discord.js bot",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run transpile",
+    "test": "npm run build && node --test",
+    "transpile": "tsc",
+    "clean": "rimraf dist",
+    "fmt": "prettier -w .",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "sequelize": "^6.28.0",
+    "sqlite3": "^5.1.4"
+  },
+  "peerDependencies": {
+    "discord.js": ">=11"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.5"
+  }
+}
