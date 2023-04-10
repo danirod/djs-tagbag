@@ -1,9 +1,14 @@
 import { Sequelize } from "sequelize";
 import { initTagModel } from "./model.js";
 
-export async function initDatabase(path: string) {
+export interface DatabaseOptions {
+  logger: boolean;
+}
+
+export async function initDatabase(path: string, options?: DatabaseOptions) {
   const sequelize = new Sequelize({
     dialect: "sqlite",
+    logging: options?.logger,
     storage: path,
   });
   initTagModel(sequelize);

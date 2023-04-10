@@ -29,6 +29,18 @@ client.on("ready", async () => {
 });
 ```
 
+You can additionally provide some extra options when calling the `initDatabase` function by providing an extra object. The following keys are accepted:
+
+* `logger` (boolean): whether to enable logging. If enabled, will print the executed queries to the console when the application is running.
+
+Here is an example where the queries would be logged if the `LOG_QUERIES` environment variable has been set:
+
+```js
+await initDatabase("settings.db", {
+	logger: !!process.env.LOG_QUERIES,
+})
+```
+
 After awaiting for `initDatabase`, your database file should be ready and you should be able to use the tagbag and tags from now on.
 
 ## How to use
