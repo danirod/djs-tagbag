@@ -18,21 +18,21 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "sequelize": "^6.28.0",
-    "sqlite3": "^5.1.4"
+    "sequelize": "^6.31.0",
+    "sqlite3": "^5.1.6"
   },
   "peerDependencies": {
     "discord.js": ">=11"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "@typescript-eslint/parser": "^5.52.0",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.4",
-    "rimraf": "^4.1.2",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
     "standard-version": "^9.5.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.4"
   }
 }
