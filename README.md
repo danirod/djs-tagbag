@@ -31,14 +31,14 @@ client.on("ready", async () => {
 
 You can additionally provide some extra options when calling the `initDatabase` function by providing an extra object. The following keys are accepted:
 
-* `logger` (boolean): whether to enable logging. If enabled, will print the executed queries to the console when the application is running.
+- `logger` (boolean): whether to enable logging. If enabled, will print the executed queries to the console when the application is running.
 
 Here is an example where the queries would be logged if the `LOG_QUERIES` environment variable has been set:
 
 ```js
 await initDatabase("settings.db", {
-	logger: !!process.env.LOG_QUERIES,
-})
+  logger: !!process.env.LOG_QUERIES,
+});
 ```
 
 After awaiting for `initDatabase`, your database file should be ready and you should be able to use the tagbag and tags from now on.
@@ -73,11 +73,11 @@ const didSentMessageTag = userBag.tag("didSentMessage");
 
 And once you have a tag, you can use the Tag API to get, set or delete the value of the tag. **All the methods are async and return promises.**
 
-* `get()`: resolves to the current value of a tag. If the tag does not have a value, it will return a fallback value which can be given as a parameter. (Otherwise it just resolves to `undefined`). **Note that if the tag does not have a value yet, this is not an error, it will resolve to a fallback or to an undefined**.
+- `get()`: resolves to the current value of a tag. If the tag does not have a value, it will return a fallback value which can be given as a parameter. (Otherwise it just resolves to `undefined`). **Note that if the tag does not have a value yet, this is not an error, it will resolve to a fallback or to an undefined**.
 
-* `set(value)`: sets the tag to the value given as a parameter. It is async and it will resolve once the value is stored in the database.
+- `set(value)`: sets the tag to the value given as a parameter. It is async and it will resolve once the value is stored in the database.
 
-* `delete()`: removes the value of the tag, if it was set. Otherwise, it is just a noop.
+- `delete()`: removes the value of the tag, if it was set. Otherwise, it is just a noop.
 
 Examples:
 
